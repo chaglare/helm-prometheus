@@ -647,13 +647,13 @@ server:
   ingress:
     ## If true, Prometheus server Ingress will be created
     ##
-    enabled: false
+    enabled: true
 
     ## Prometheus server Ingress annotations
     ##
     annotations: {}
-    #   kubernetes.io/ingress.class: nginx
-    #   kubernetes.io/tls-acme: 'true'
+      kubernetes.io/ingress.class: nginx
+      kubernetes.io/tls-acme: 'true'
 
     ## Prometheus server Ingress additional labels
     ##
@@ -875,13 +875,13 @@ pushgateway:
   ingress:
     ## If true, pushgateway Ingress will be created
     ##
-    enabled: false
+    enabled: true
 
     ## pushgateway Ingress annotations
     ##
-    annotations: {}
-    #   kubernetes.io/ingress.class: nginx
-    #   kubernetes.io/tls-acme: 'true'
+    annotations: 
+      kubernetes.io/ingress.class: nginx
+      kubernetes.io/tls-acme: 'true'
 
     ## pushgateway Ingress hostnames with optional path
     ## Must be provided if Ingress is enabled
